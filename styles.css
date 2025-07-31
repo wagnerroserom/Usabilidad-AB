@@ -4,3 +4,77 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*Estilos generales de la página*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*Estilo del contenedor principal*/
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+/*Estilo del contenedor principal*/
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+/*Estilo para el título*/
+h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+/*Estilo para la imagen del artista*/
+.artist-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #1DB954;
+}
+
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/*Estilo para el botón de reproducción*/
+#play-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/*Realizo efecto hover del botón de reproducción*/
+#play-btn:hover {
+    background-color: #222;
+}
