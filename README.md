@@ -31,7 +31,6 @@ Abre: https://github.com/wagnerroserom/Usabilidad-AB.git
 ## Autores
 
 - Arévalo Romero Víctor Hugo
-- Chila Ortiz Jenny Viviana
 - Rosero Macías Wagner Antonio
 - Zevallos Delgado Joseph Geovanny
 
