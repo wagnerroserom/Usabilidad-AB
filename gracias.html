@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias por tu amable participación</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gracias por tu participación</title>
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            margin-top: 60px;
-            background-color: #f0f8f0;
-            color: #333;
+    /* Estilos generales */
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f0f8f0;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
         }
-        .container {
-            max-width: 50px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        button {
-            background-color: #1DB954;
+
+    /* Contenedor principal */
+    .container {
+        text-align: center;
+        background: white;
+        padding: 40px 30px;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+    }
+
+    /* Icono de agradecimiento */
+    .icon {
+        font-size: 60px;
+        color: #1DB954;
+        margin-bottom: 20px;
+    }
+
+    /* Título */
+    h2 {
+        font-size: 26px;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+    }
+
+    /* Texto descriptivo */
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    /* Botón para ir al formulario */
+    .btn-form {
+        background-color: #1DB954;
         color: white;
         border: none;
         padding: 14px 28px;
@@ -29,28 +60,65 @@
         font-size: 17px;
         font-weight: bold;
         cursor: pointer;
-        margin-top: 15px;
-        transition: 0.3s;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
     }
-    button:hover {
+
+    .btn-form:hover {
         background-color: #1ed760;
         transform: scale(1.05);
+        box-shadow: 0 6px 14px rgba(29, 185, 84, 0.4);
+    }
+
+    /* Pie de página */
+    .footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #888;
     }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>¡Gracias por tu participación! </h2>
-        <p>Ahora por favor reponde un corto cuestionario sobre tu elección.</p>
-        <button id="openForm">Ir al cuestionario</button>
+    <!-- Emoji de música -->
+    <div class="icon">🎵</div>
+
+    <h2>¡Muchas gracias por tu participación!</h2>
+    <h2>Recuerda:</h2>
+        <h4>Opción A = Botón con símbolo +</h4> 
+        <h4>Opción B = Botón con frase "SEGUIR ARTISTA"</h4>
+
+    <p>
+        Tu colaboración es fundamental para evaluar y mejorar la usabilidad de interfaces digitales.
+        <br><br>
+        Por favor, toma un momento para responder un breve cuestionario sobre tu experiencia.
+    </p>
+
+    <!-- Botón que abre el formulario de Google -->
+    <button class="btn-form" id="openForm">Ir al cuestionario</button>
+
+    <div class="footer">
+        Universidad que transforma, calidad que trasciende.<br>
+        Interacción Humano-Computador - Actividad #10<br>
+        Proverbios 23:12
+    </div>
     </div>
 
     <script>
-        const formURL = 'https://docs.google.com/forms/d/1mSR5PL_RpRgHiXXOZ3efXe0axt9rw-DRX81dENt11vs/edit';
+    // Enlace al formulario de Google Forms
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/1mSR5PL_RpRgHiXXOZ3efXe0axt9rw-DRX81dENt11vs/edit';
 
-        document.getElementById('openForm').addEventListener('click', () => {
-            window.open(formURL, '_blank');
-        });
+    // Escuchar el clic en el botón
+    document.getElementById('openForm').addEventListener('click', function () {
+    
+        window.open(GOOGLE_FORM_URL, '_blank');
+
+        this.disabled = true;
+        this.textContent = 'Abriendo...';
+        setTimeout(() => {
+        this.textContent = '¡Gracias!';
+    }, 1000);
+    });
     </script>
 </body>
 </html>
