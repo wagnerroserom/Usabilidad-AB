@@ -34,3 +34,6 @@ function handleChoice(version) {
     }, 500);
 }
 
+//Se asigna eventos a ambos botones
+btnA.addEventListener('click', () => handleChoice('A'));
+btnB.addEventListener('click', () => handleChoice('B'));
