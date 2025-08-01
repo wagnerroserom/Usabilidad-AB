@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por tu amable participación</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            margin-top: 60px;
+            background-color: #f0f8f0;
+            color: #333;
+        }
+        .container {
+            max-width: 50px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #1DB954;
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #1ed760;
+        transform: scale(1.05);
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>¡Gracias por tu participación! </h2>
+        <p>Ahora por favor reponde un corto cuestionario sobre tu elección.</p>
+        <button id="openForm">Ir al cuestionario</button>
+    </div>
+
+    <script>
+        const formURL = 'https://docs.google.com/forms/d/1mSR5PL_RpRgHiXXOZ3efXe0axt9rw-DRX81dENt11vs/edit';
+
+        document.getElementById('openForm').addEventListener('click', () => {
+            window.open(formURL, '_blank');
+        });
+    </script>
+</body>
+</html>
